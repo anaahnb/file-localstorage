@@ -2,11 +2,6 @@ function savePDF() {
     const fileInput = document.getElementById("input")
     const file = fileInput.files[0]
 
-    if (!file) {
-        alert("Selecione um arquivo PDF primeiro.")
-        return;
-    }
-
     const reader = new FileReader()
     reader.onload = function (e) {
         const base64PDF = e.target.result
